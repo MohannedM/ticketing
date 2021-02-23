@@ -1,9 +1,9 @@
 import { OrderCancelledEvent, OrderStatus } from "@microservices-tickets/common";
 import { Types } from "mongoose";
 import { Message } from "node-nats-streaming";
-import { Order } from "../../models/order";
-import { natsWrapper } from "../../nats-wrapper";
-import { OrderCancelledListener } from "../listeners/order-cancelled-listener";
+import { Order } from "../../../models/order";
+import { natsWrapper } from "../../../nats-wrapper";
+import { OrderCancelledListener } from "../order-cancelled-listener";
 
 const setup = async () => {
     const listener = new OrderCancelledListener(natsWrapper.client)
