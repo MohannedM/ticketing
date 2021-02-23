@@ -11,6 +11,7 @@ const start = async () => {
   if(!process.env.NATS_URL){
     throw new Error('NATS_URL must be defined')
   }
+
   try {
     await natsWrapper.connect(process.env.NATS_CLUSTER_ID!, process.env.NATS_CLIENT_ID!, process.env.NATS_URL!)
       // @ts-ignore
