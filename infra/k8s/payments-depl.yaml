@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: payments
-          image: us.gcr.io/deft-processor-248810/payments
+          image: mohannedm/payments
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
