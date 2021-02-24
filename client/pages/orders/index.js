@@ -16,3 +16,5 @@ Orders.getInitialProps = async (context, client) => {
 
     return { orders: data }
 }
+
+export default Orders
